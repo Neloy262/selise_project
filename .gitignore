@@ -1,0 +1,65 @@
+# --- Python Standard ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# --- Poetry Specific ---
+# Keep poetry.lock to ensure reproducible builds.
+# Only uncomment the next line if you specifically want to ignore it.
+# poetry.lock
+
+# Poetry creates virtual envs in .venv by default when configured locally
+.venv/
+dist/
+build/
+*.egg-info/
+
+# --- Environment Variables ---
+.env
+.env.local
+
+# --- IDEs / Editors ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# --- User Requested: Data & Media ---
+# Images
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.ico
+*.webp
+
+# Documents
+*.pdf
+*.docx
+*.doc
+*.txt
+*.md
+# (Be careful ignoring .md if you have a README.md)
+!README.md
+
+# Data
+*.db
+*.csv
+*.xls
+*.xlsx
+*.json
+*.xml
+*.sql
+*.sqlite3
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
