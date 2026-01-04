@@ -1,6 +1,4 @@
-from email.contentmanager import raw_data_manager
 
-from openai import azure_endpoint
 
 from VectorDB import VectorStoreManager
 from parse_file import parse_pdf,chunking,process_csv,parse_docx
@@ -90,15 +88,11 @@ def ask_agent(query_text, collection):
 
     # 3. Setup Azure Model
     # NOTE: It is best practice to load these from Environment Variables
-    api_key = os.getenv("AZURE_OPENAI_API_KEY", "YOUR_FALLBACK_KEY_HERE_IF_NOT_USING_ENV_VARS")
-    azure_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT",
-                               "https://assessement-4-temp-foun-resource.cognitiveservices.azure.com/")
 
     model = AzureOpenAIModel(
         model_id="gpt-4.1-mini",  # <--- MUST match the name in Azure Portal exactly
         azure_endpoint=AZURE_ENDPOINT,
         api_key=API_KEY,
-        # Avoid pasting real keys in chat/public forums
         api_version="2024-08-01-preview"
     )
 
